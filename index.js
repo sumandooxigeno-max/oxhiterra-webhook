@@ -1,5 +1,5 @@
-import { ethers } from 'ethers';
 import express from 'express';
+import { ethers } from 'ethers';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -18,7 +18,7 @@ app.use((req, res, next) => {
     next();
 });
 
-// Webhook endpoint
+// ✅ WEBHOOK ENDPOINT (LA RUTA CORRECTA)
 app.post('/api/holstinguer-webhook', async (req, res) => {
     try {
         const apiKey = req.headers['x-api-key'];
@@ -78,7 +78,7 @@ app.post('/api/holstinguer-webhook', async (req, res) => {
     }
 });
 
-// Ruta de prueba
+// Ruta de prueba (la que funciona ahora)
 app.get('/', (req, res) => {
     res.json({ status: 'OK', message: 'Webhook funcionando' });
 });

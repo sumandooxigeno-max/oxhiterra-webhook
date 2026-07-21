@@ -1,8 +1,12 @@
 {
-  "name": "oxhiterra-webhook",
-  "version": "1.0.0",
-  "type": "module",
-  "dependencies": {
-    "ethers": "^5.7.2"
-  }
+    "name": "oxhiterra-webhook",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "ethers": "^5.7.2",
+        "express": "^4.18.2"
+    }
 }
